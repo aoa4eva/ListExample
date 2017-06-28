@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Dave's List - Add Room</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/addRoom}" th:object="${thisRoom}" method="post">
+	 <p>Description <input type="text" th:field="*{shortDescription}" /><span th:if="${#fields.hasErrors('shortDescription')}" th:errors="*{shortDescription}"> Error saving short description</span></p>
+	<div>
+  	<select th:field="*{USAState}">
+	<option th:field="*{USAState}" value="AL">Alabama</option>
+	<option th:field="*{USAState}" value="AK">Alaska</option>
+	<option th:field="*{USAState}" value="AZ">Arizona</option>
+	<option th:field="*{USAState}" value="AR">Arkansas</option>
+	<option th:field="*{USAState}" value="CA">California</option>
+	<option th:field="*{USAState}" value="CO">Colorado</option>
+	<option th:field="*{USAState}" value="CT">Connecticut</option>
+	<option th:field="*{USAState}" value="DE">Delaware</option>
+	<option th:field="*{USAState}" value="DC">District Of Columbia</option>
+	<option th:field="*{USAState}" value="FL">Florida</option>
+	<option th:field="*{USAState}" value="GA">Georgia</option>
+	<option th:field="*{USAState}" value="HI">Hawaii</option>
+	<option th:field="*{USAState}" value="ID">Idaho</option>
+	<option th:field="*{USAState}" value="IL">Illinois</option>
+	<option th:field="*{USAState}" value="IN">Indiana</option>
+	<option th:field="*{USAState}" value="IA">Iowa</option>
+	<option th:field="*{USAState}" value="KS">Kansas</option>
+	<option th:field="*{USAState}" value="KY">Kentucky</option>
+	<option th:field="*{USAState}" value="LA">Louisiana</option>
+	<option th:field="*{USAState}" value="ME">Maine</option>
+	<option th:field="*{USAState}" value="MD">Maryland</option>
+	<option th:field="*{USAState}" value="MA">Massachusetts</option>
+	<option th:field="*{USAState}" value="MI">Michigan</option>
+	<option th:field="*{USAState}" value="MN">Minnesota</option>
+	<option th:field="*{USAState}" value="MS">Mississippi</option>
+	<option th:field="*{USAState}" value="MO">Missouri</option>
+	<option th:field="*{USAState}" value="MT">Montana</option>
+	<option th:field="*{USAState}" value="NE">Nebraska</option>
+	<option th:field="*{USAState}" value="NV">Nevada</option>
+	<option th:field="*{USAState}" value="NH">New Hampshire</option>
+	<option th:field="*{USAState}" value="NJ">New Jersey</option>
+	<option th:field="*{USAState}" value="NM">New Mexico</option>
+	<option th:field="*{USAState}" value="NY">New York</option>
+	<option th:field="*{USAState}" value="NC">North Carolina</option>
+	<option th:field="*{USAState}" value="ND">North Dakota</option>
+	<option th:field="*{USAState}" value="OH">Ohio</option>
+	<option th:field="*{USAState}" value="OK">Oklahoma</option>
+	<option th:field="*{USAState}" value="OR">Oregon</option>
+	<option th:field="*{USAState}" value="PA">Pennsylvania</option>
+	<option th:field="*{USAState}" value="RI">Rhode Island</option>
+	<option th:field="*{USAState}" value="SC">South Carolina</option>
+	<option th:field="*{USAState}" value="SD">South Dakota</option>
+	<option th:field="*{USAState}" value="TN">Tennessee</option>
+	<option th:field="*{USAState}" value="TX">Texas</option>
+	<option th:field="*{USAState}" value="UT">Utah</option>
+	<option th:field="*{USAState}" value="VT">Vermont</option>
+	<option th:field="*{USAState}" value="VA">Virginia</option>
+	<option th:field="*{USAState}" value="WA">Washington</option>
+	<option th:field="*{USAState}" value="WV">West Virginia</option>
+	<option th:field="*{USAState}" value="WI">Wisconsin</option>
+	<option th:field="*{USAState}" value="WY">Wyoming</option>
+</select>		
+  	<label>Has the room been rented?</label><input type="checkbox" th:field="*{Rented}" value="Y"/>
+	</div>
+	 <input type="Submit"/>
+</form>
+</body>
+</html>

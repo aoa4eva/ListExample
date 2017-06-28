@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Dave's List - See all rooms</title>
+</head>
+<body>
+
+<table>
+ <thead>
+   <tr>
+   	<th>Listing #</th>  
+   	<th>Description</th>
+   	<th>Address</th>
+   	<th>City</th>
+   	<th>State</th>
+   </tr>
+  </thead>
+   <tbody th:each="room:${roomList}">
+      <tr>
+         <td th:text="${room.id}">ID</td>
+         <td th:text="${room.shortDescription}">Description</td>
+         <td th:text="${room.Address}">Address</td>
+         <td th:text="${room.City}">City</td>
+         <td th:text="${room.USAState}">USAState</td>
+
+      </tr>
+   </tbody>
+</table>
+</body>
+</html>
